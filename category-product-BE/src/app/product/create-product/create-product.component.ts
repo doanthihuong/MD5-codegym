@@ -2,8 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
 
-import {Category} from "../../model/category";
 import {Observable} from "rxjs";
+import {Category} from "../../model/category";
+import {Router} from "@angular/router";
+import {ProductService} from "../../service/product.service";
+import {CategoryService} from "../../service/category.service";
 
 @Component({
   selector: 'app-create-product',
@@ -19,16 +22,19 @@ form =new FormGroup({
 });
 obj:any;
   list_category: any;
-  private data: any;
-  private router: any;
-  constructor(private httpClient: HttpClient) { }
+listCategory: Category[]=[];
+  constructor(private httpClient: HttpClient,
+              private router: Router,
+              private productService: ProductService,
+              private categoryService: CategoryService) { }
 
   ngOnInit(): void {
-    this.httpClient.get('http://localhost:8085/api/categorys').subscribe((categories) => {
-      this.list_category = categories;
-    })
+    this.categoryService.findAll().subscribe((data) => {
+      this.listCategory = data;
+    });
   }
 add(){
+    console.log(this.form.value)
     this.obj={
       name:this.form.value.name,
       price:this.form.value.price,

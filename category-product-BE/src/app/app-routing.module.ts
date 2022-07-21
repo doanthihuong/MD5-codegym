@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import {ListProductComponent} from "./product/list-product/list-product.component";
 import {CreateProductComponent} from "./product/create-product/create-product.component";
 
-const routes: Routes = [{
+const routes: Routes = [
+  {
   path:'product',
   component:ListProductComponent,
   children:[

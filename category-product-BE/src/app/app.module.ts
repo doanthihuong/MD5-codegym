@@ -8,6 +8,8 @@ import { ListProductComponent } from './product/list-product/list-product.compon
 import { CreateProductComponent } from './product/create-product/create-product.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { ListCategoryComponent } from './category/list-category/list-category.component';
+import { DeleteProductComponent } from './product/delete-product/delete-product.component';
+
 
 
 // @ts-ignore
@@ -17,6 +19,8 @@ import { ListCategoryComponent } from './category/list-category/list-category.co
     ListProductComponent,
     CreateProductComponent,
     ListCategoryComponent,
+    DeleteProductComponent,
+
 
   ],
   imports: [
