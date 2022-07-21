@@ -9,6 +9,8 @@ import {ReactiveFormsModule} from "@angular/forms";
 import { ProductUpdateComponent } from './product/product-update/product-update.component';
 
 import { ProductDeleteComponent } from './product/product-delete/product-delete.component';
+import { CreateCategoryComponent } from './category-be/create-category/create-category.component';
+import { ListCategoryComponent } from './category-be/list-category/list-category.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,10 @@ import { ProductDeleteComponent } from './product/product-delete/product-delete.
     ProductListComponent,
     ProductCreateComponent,
     ProductUpdateComponent,
-    ProductDeleteComponent
+    ProductDeleteComponent,
+
+    CreateCategoryComponent,
+    ListCategoryComponent
   ],
     imports: [
         BrowserModule,

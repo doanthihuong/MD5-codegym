@@ -1,0 +1,11 @@
+
+<table border="1px">
+  <tr>
+    <td>ID</td>
+    <td>Name </td>
+  </tr>
+  <tr *ngFor="let item of list_category ; index as i" >
+    <td>{{i+1}}</td>
+    <td>{{item.name}}</td>
+  </tr>
+</table>
